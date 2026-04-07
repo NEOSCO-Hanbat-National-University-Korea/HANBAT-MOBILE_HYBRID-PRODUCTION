@@ -147,7 +147,7 @@
     } catch (e) {}
 
     if (!sessionProject) {
-      sessionProject = "CNU-" + uuid;
+      sessionProject = "HANBAT-" + uuid;
     }
 
     window.$support = new PageSpy({
