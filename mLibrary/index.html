@@ -6,13 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <link rel="icon" type="image/svg+xml" href="/mLibrary/favicon.png" />
   <title>Wise Library</title>
-  <script type="module" crossorigin src="/mLibrary/assets/index-CLizUDv5.js"></script>
+  <script type="module" crossorigin src="/mLibrary/assets/index-o5ctIQOu.js"></script>
   <link rel="stylesheet" crossorigin href="/mLibrary/assets/index-B5QsQXVT.css">
 </head>
 
 <body>
   <div id="root"></div>
   <script src="/mLibrary/support.js?260313.1"></script>
+  <script>
+    // find query parameter "debug" and if it exists, set localStorage.debug to its value
+    const urlParams = new URLSearchParams(window.location.search);
+    const mode = urlParams.get("mode");
+    const sessionEnc = urlParams.get("sessionEnc");
+    if (mode && mode === "nativeApp") { sessionStorage.setItem("isNativeApp", "true"); }
+    if (sessionEnc) { sessionStorage.setItem("sessionEnc", sessionEnc); }
+  </script>
 </body>
 
 </html>
