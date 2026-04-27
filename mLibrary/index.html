@@ -18,8 +18,9 @@
     const urlParams = new URLSearchParams(window.location.search);
     const mode = urlParams.get("mode");
     const sessionEnc = urlParams.get("sessionEnc");
+    const userId = urlParams.get("userId");
     if (mode && mode === "nativeApp") { sessionStorage.setItem("isNativeApp", "true"); }
-    if (sessionEnc) { sessionStorage.setItem("sessionEnc", sessionEnc); }
+    if (sessionEnc || userId) { sessionStorage.setItem("sessionEnc", sessionEnc || userId); }
   </script>
 </body>
 
